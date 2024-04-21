@@ -180,6 +180,22 @@ xc7a200t:
     vpr_options: *xc7-vpr_options
 
 
+xc7s50:
+
+  <<: *xc7
+
+  values:
+    device: xc7s50_test
+    bitstream_device: spartan7
+    pinmap: '${shareDir}/arch/xc7s50_test/vpr_grid_map.csv'
+    arch_def: '${shareDir}/arch/xc7s50_test/arch.timing.xml'
+    rr_graph_lookahead_bin: '${shareDir}/arch/xc7s50_test/rr_graph_xc7s50_test.lookahead.bin'
+    rr_graph_real_bin: '${shareDir}/arch/xc7s50_test/rr_graph_xc7s50_test.rr_graph.real.bin'
+    vpr_place_delay: '${shareDir}/arch/xc7s50_test/rr_graph_xc7s50_test.place_delay.bin'
+    vpr_grid_layout_name: xc7s50-test
+    vpr_options: *xc7-vpr_options
+
+
 ice40:
 
   values:
